@@ -4,6 +4,7 @@ import "./globals.css";
 import TopBar from "@/components/topBar";
 import { MantineProvider, ColorSchemeScript } from "@mantine/core";
 import "@mantine/core/styles.css";
+import Providers from "@/redux/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,10 +24,12 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body className={inter.className} suppressHydrationWarning={true}>
-        <MantineProvider>
-          <TopBar />
-          {children}
-        </MantineProvider>
+        <Providers>
+          <MantineProvider>
+            <TopBar />
+            {children}
+          </MantineProvider>
+        </Providers>
       </body>
     </html>
   );
