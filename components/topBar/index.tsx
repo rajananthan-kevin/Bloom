@@ -33,22 +33,24 @@ const TopBar = () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.bloomImage}>
+
+      <Link href={"/"} className={styles.bloomImage}>
         <Image
           src={"/images/bloom.png"}
           alt={"bloom.webp"}
           fill
-          sizes={"auto"}
+          priority
+          sizes="(max-width: 100px) 15vw, 13vw"
           className={styles.image}
         />
-      </div>
+      </Link>
       <div className={styles.menu}>
         <Image
           src={"/icons/menu.svg"}
           alt={"menu.svg"}
           fill
           sizes={"auto"}
-          className={styles.image}
+          className={styles.image2}
         />
       </div>
       <ul>

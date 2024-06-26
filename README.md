@@ -1,52 +1,52 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# Projet d'affichage d'offres d'emploi
+# Job Listing Display Project
 
 ## Introduction
-Ce projet est une application web construite avec Next.js, qui permet d'afficher des listes d'offres d'emploi sur une page et d'afficher les détails d'une offre spécifique sur une autre page. Ce projet utilise AppRouter de Next.js pour la navigation entre les pages.
+This project is a web application built with Next.js, designed to display job listings on one page and show the details of a specific job on another page. This project uses Next.js's AppRouter for navigation between pages.
 
-## Structure du projet
-Le projet est organisé comme suit :
+## Project Structure
+The project is organized as follows:
 
 - **api/**
-  - **jobServices.ts** : Contient tous les appels API.
+  - **jobServices.ts**: Contains all API calls.
 
 - **app/routes/**
-  - **root/** : Page principale qui affiche la liste des offres d'emploi ainsi que les composants utilisés dans la page.
-  - **job/** : Page de détail pour afficher les informations d'une offre d'emploi spécifique ainsi que les composants utilisés dans la page.
-  - **redux** : Exemple de mise en place de redux.
-  - **layout.tsx** : Mise en page appliquée sur l’ensemble du projet.
-  - **loading.tsx** : Composant de chargement appliqué sur l’ensemble du projet.
-  - **not-found.tsx** : Page 404.
+  - **root/**: Main page displaying the list of job offers and the components used on the page.
+  - **job/**: Detail page displaying information about a specific job offer and the components used on the page.
+  - **redux**: Example of Redux setup.
+  - **layout.tsx**: Layout applied throughout the project.
+  - **loading.tsx**: Loading component applied throughout the project.
+  - **not-found.tsx**: 404 page.
 
-- **components/** : Composants utilisés sur plusieurs pages du projet.
+- **components/**: Components used on multiple pages of the project.
 
-- **public/** : Contient les fichiers statiques comme les images et les styles.
+- **public/**: Contains static files like images and styles.
 
-- **lib/** : Diverses fonctions utilisées dans le projet.
+- **lib/**: Various functions used in the project.
 
-- **styles/** : Contient les fichiers de styles CSS.
+- **styles/**: Contains CSS style files.
 
-- **redux/** : Configuration de Redux.
+- **redux/**: Redux configuration.
 
-- **.env** : Variables d’environnement.
+- **.env**: Environment variables.
 
-## Processus de réflexion
+## Thought Process
 
-### Avant le développement
-Avant de commencer le développement, j'ai défini les fonctionnalités clés de l'application :
-- Afficher une liste d'offres d'emploi, la pagination, et la possibilité de rechercher un emploi.
-- Permettre de cliquer sur une offre pour voir les détails.
-- Utiliser les fonctionnalités de routage de Next.js pour la navigation entre les pages.
+### Before Development
+Before starting development, I defined the key features of the application:
+- Display a list of job offers, with pagination and the ability to search for a job.
+- Allow clicking on a job offer to see the details.
+- Use Next.js routing features for navigation between pages.
 
-### Pendant le développement
-Pendant le développement, j'ai suivi ces étapes :
-- Création d’un dossier **routes** où se trouvent une route pour la page de la liste d’offres d’emploi et une autre route (dossier **job**) pour la consultation d’un job.
-- Passage des données via l'URL : J'ai choisi de ne pas utiliser Redux pour la gestion d'état. Les données sont passées via l'URL (l’id de l’offre d’emploi), ce qui simplifie le partage des informations entre les pages.
+### During Development
+During development, I followed these steps:
+- Created a **routes** folder containing a route for the job listing page and another route (the **job** folder) for viewing a specific job.
+- Passed data via the URL: I chose not to use Redux for state management. Data is passed via the URL (the job offer ID), simplifying information sharing between pages.
 
-### Après le développement
-Après avoir terminé le développement, j'ai effectué les tests suivants :
-- Tests de navigation : Vérifier que l'on peut naviguer correctement entre la liste des offres et le détail d'une offre, et s'assurer que les données soient affiché.
+### After Development
+After completing development, I performed the following tests:
+- Navigation tests: Verified that you can correctly navigate between the job list and the details of a job, and also view them.
 
 ## Getting Started
 
