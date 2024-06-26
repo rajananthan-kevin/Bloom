@@ -1,6 +1,7 @@
 import JobService from "@/api/jobServices";
 import React from "react";
 import JobByIdCard from "./components/jobByIdCard";
+import styles from "./page.module.css";
 
 type PageProps = {
   params: { id: string };
@@ -9,10 +10,12 @@ type PageProps = {
 const JobById = async ({ params }: PageProps) => {
 
   const jobById = await JobService.getJobById(params.id);
-
+  
   return (
     <>
-      <JobByIdCard jobById={jobById.data} />
+      <div className={styles.jobSection}>
+        <JobByIdCard jobById={jobById.data} />
+      </div>
     </>
   );
 };

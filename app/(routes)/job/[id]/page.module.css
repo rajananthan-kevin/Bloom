@@ -1,0 +1,9 @@
+.jobSection {
+    height: 100vh;
+    padding-top: calc(10px + 5vw);
+    padding-bottom: calc(10px + 3vw);
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    gap: calc(8px + 2vw);
+}

@@ -1,4 +1,17 @@
 .container {
-    background-color: red;
-    
+    background-color: #FFFFFF; 
+    width: 70%;
+    border-radius: var(--borderRadius);
+    padding: calc(8px + 3vw);
+    border: 0.5px solid #D1D1D1;
+}
+
+.boldTitle {
+    font-weight: bold;
+}
+
+.description > p {
+    color: var(--blue);
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

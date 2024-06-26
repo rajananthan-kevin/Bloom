@@ -5,6 +5,7 @@ import { Pagination } from "@mantine/core";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
 const PaginationSection = ({ totalPages }: { totalPages: number }) => {
+  
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const {replace} = useRouter();
@@ -16,7 +17,7 @@ const PaginationSection = ({ totalPages }: { totalPages: number }) => {
     replace(`${pathname}?${params.toString()}`);
   };
 
-  return <Pagination value={currentPage} total={totalPages} onChange={(num) => createPageURL(num)} />;
+  return <Pagination value={currentPage} total={totalPages} onChange={(num) => createPageURL(num)} radius="lg" />;
 };
 
 export default PaginationSection;
