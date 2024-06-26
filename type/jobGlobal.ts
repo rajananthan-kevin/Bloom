@@ -8,7 +8,7 @@ const companySchema = z.object({
     description: z.string(),
 });
 const infoSchema = z.object({
-    title: z.string(),
+    title: z.string().optional(),
     city: z.string().optional(),
     type: z.string().optional(),
 });
@@ -30,6 +30,7 @@ export const jobObject = z.object({
 
 
 export type Job = z.infer<typeof jobSchema>;
+export type JobObject = z.infer<typeof jobObject>;
 
 
 //JobID request (GETBYID)
