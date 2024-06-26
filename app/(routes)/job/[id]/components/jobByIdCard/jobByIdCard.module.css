@@ -1,10 +1,12 @@
 .jobSection {
     padding-top: calc(10px + 5vw);
     padding-bottom: calc(10px + 3vw);
-    background-color: var(--grey);
+    background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: calc(8px + 2vw);
+    border-radius: var(--borderRadius);
+    margin: calc(4px + 0.8vw);
 }

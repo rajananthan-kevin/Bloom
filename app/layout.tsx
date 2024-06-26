@@ -6,6 +6,7 @@ import "@mantine/core/styles.css";
 import "./globals.css";
 import TopBar from "@/components/topBar";
 import styles from "./layout.module.css";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <ColorSchemeScript />
-      </head>
+      </Head>
       <body className={inter.className} suppressHydrationWarning={true}>
         <Providers>
           <MantineProvider>

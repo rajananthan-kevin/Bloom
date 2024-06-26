@@ -25,7 +25,7 @@ const jobSchema = z.object({
 export const jobObject = z.object({
    data: z.array(jobSchema),
    total: z.number(),
-   pages: z.number(),
+   pages: z.number().nullable(),
 })
 
 

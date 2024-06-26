@@ -1,22 +1,27 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import JobService from "@/api/jobServices";
 import JobCard from "./components/jobCard";
 import PaginationSection from "./components/pagination";
 import { redirect } from "next/navigation";
 import { JobObject } from "@/type/jobGlobal";
+import SearchBar from "./components/searchBar";
 
 export default async function Jobs({
   searchParams,
 }: {
   searchParams?: {
     page?: string;
+    job?: string;
+    location?: string;
   };
 }) {
   let currentPage = Number(searchParams?.page) || 1;
-  const jobs = await JobService.getAllJobs(currentPage);
+  let job = searchParams?.job || "";
+  let location = searchParams?.location || "";
+  let isJobOrLocationParams = location != "" || location != "" ? true : false;
+  const jobs = await JobService.getAllJobs({ currentPage, job, location });
 
-  if (currentPage > jobs.pages) {
+  if (currentPage > (jobs.pages || 1)) {
     console.log(jobs.pages);
     redirect(`?page=1`);
   }
@@ -24,8 +29,11 @@ export default async function Jobs({
   return (
     <>
       <div className={styles.jobSection}>
+        <SearchBar />
         <JobList jobs={jobs} />
-        <PaginationSection totalPages={jobs.pages} />
+        {!isJobOrLocationParams && (
+          <PaginationSection totalPages={jobs.pages} />
+        )}
       </div>
     </>
   );

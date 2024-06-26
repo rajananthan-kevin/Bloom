@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(6px + 1.8vw);
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(2px + 0.6vw);
+}
